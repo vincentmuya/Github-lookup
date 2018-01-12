@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { GithubComponent } from './github/github.component';
+import {HttpClientModule } from '@angular/common/http'
 const routes:Routes=[
   {path:"about",component:AboutComponent},
   {path:"contact",component:ContactComponent}
@@ -22,7 +23,8 @@ const routes:Routes=[
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    NgProgressModule.forRoot()
+    NgProgressModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
