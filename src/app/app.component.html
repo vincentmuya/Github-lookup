@@ -18,9 +18,16 @@
   </div>
 </nav>
 <router-outlet></router-outlet>
+
+<div class="input">
+  <input type="text" [(ngModel)]>
+  <button type="button" (click)="searchGitName()">Search</button>
+</div>
+
 <div class="lookupDisplay" *ngIf="gitHubDetails">
 <img align="center"[scr]="githubDetails.avatar_url">
 </div>
+
 <div class="results" *ngIf="githubDetails">
   <h3>name:</h3>
   <h3>company:</h3>
