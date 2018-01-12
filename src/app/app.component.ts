@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Http, Response } from '@angular/http'
-import { gitHubDetails} from './lookup-model'
+import { Http, Response} from '@angular/http';
+
+import { Details } from './details';
 
 @Component({
   selector: 'app-root',
@@ -8,26 +9,23 @@ import { gitHubDetails} from './lookup-model'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  gitName = '';
-    gitHubDetails;
-    name = '';
-    id = '';
-    url = '';
-    avatar_url = '';
+  userName='';
+  avatar_url='';
+  details:Details;
 
-  constructor (private http:Http) {}
+  constructor(private http:Http){}
 
-    searchGitName() {
-      this.http.get('https://api.github.com/users/' +this.gitName).subscribe(
-        (res:Response)=>{
-          const gitHubDetails1 =res.json();
-          console.log(gitHubDetails1)
-          this.gitHubDetails= gitHubDetails1;
+  searchUser(){
+  this.http.get('https://api.github.com/users/'+this.userName).
+  subscribe(
+(res:Response)=>{
+  const details= res.json();
+  			console.log(details);
+        this.details=details;
+  		},
+    )  
+}
 
 
-        }
-      )
-
-    }
 
 }
