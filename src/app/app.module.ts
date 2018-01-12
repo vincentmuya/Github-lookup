@@ -36,4 +36,19 @@ name = '';
 id ='';
 url = '' ;
 avatar_url ='';
+
+constructor (private http:Http) {}
+
+    searchGitName() {
+      this.http.get('https://api.github.com/users/' +this.gitName).subscribe(
+        (res:Response)=>{
+          const gitHubDetails1 =res.json();
+          console.log(gitHubDetails1)
+          this.gitHubDetails= gitHubDetails1;
+
+
+        }
+      )
+
+    }
 }
