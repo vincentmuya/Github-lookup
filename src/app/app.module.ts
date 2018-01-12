@@ -6,7 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgProgressModule } from '@ngx-progressbar/core';
-import { GithubComponent } from './github/github.component';
+// import { GithubComponent } from './github/github.component';
 import {HttpClientModule } from '@angular/common/http'
 const routes:Routes=[
   {path:"about",component:AboutComponent},
@@ -18,7 +18,7 @@ const routes:Routes=[
     AppComponent,
     AboutComponent,
     ContactComponent,
-    GithubComponent
+    // GithubComponent
   ],
   imports: [
     BrowserModule,
@@ -29,4 +29,11 @@ const routes:Routes=[
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+gitName ='';
+gitHubDetails;
+name = '';
+id ='';
+url = '' ;
+avatar_url ='';
+}
