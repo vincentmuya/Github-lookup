@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Http, Response } from '@angular/http'
+import { gitHubDetails} from './lookup-model'
 
 @Component({
   selector: 'app-root',
