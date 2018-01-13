@@ -7,6 +7,6 @@ export class GithubService {
 getDetails(){
   return Details;
 }
-  constructor() { }
+  constructor(private _http:HttpClient) { }
 
 }
