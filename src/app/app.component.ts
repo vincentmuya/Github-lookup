@@ -10,7 +10,7 @@ import{ GithubService} from './github/github.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+userName:string
   details:any=[];
 
   constructor(private user:GithubService){}
