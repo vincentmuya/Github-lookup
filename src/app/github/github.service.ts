@@ -13,7 +13,7 @@ export class GithubService {
 // }
 apiUrl=environment.apiUrl;
 token=environment.apikey;
-userName='vincentmuya';
+userName='';
   details:Details;
 searchUser(){
 return this._http.get(this.apiUrl+this.userName +"?access_token="+this.token)

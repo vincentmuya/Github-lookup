@@ -11,7 +11,8 @@ import{ GithubService} from './github/github.service';
   imports: [
       BrowserModule,
       HttpClientModule,
-      FormsModule
+      FormsModule,
+
     ],
     providers: [GithubService],
       bootstrap: [AppComponent]
